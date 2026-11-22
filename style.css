@@ -1,0 +1,146 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #54234d, transparent 55%),
+        linear-gradient(135deg, #160d20, #241128, #100b18);
+
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 480px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    padding: 45px 30px;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.4);
+
+    animation: appear 0.8s ease;
+}
+
+.emoji {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff9ac4;
+}
+
+p {
+    color: #d5c5d8;
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+
+    background: linear-gradient(135deg, #ff5794, #ff80ae);
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 25px rgba(255, 87, 148, 0.35);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 5px 35px rgba(255, 87, 148, 0.6);
+}
+
+.progress {
+    width: 100%;
+    height: 5px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    width: 10%;
+    height: 100%;
+    background: #ff5794;
+    border-radius: 10px;
+}
+
+.footer {
+    margin-top: 25px;
+    color: #8f7895;
+    font-size: 12px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
+
+
+#invitationAnswers {
+    position: relative;
+    min-height: 190px;
+    overflow: hidden;
+}
+
+#invitationAnswers #noButton {
+    z-index: 10;
+    transition: none !important;
+    touch-action: none;
+}
+.card {
+    max-height: 85vh;
+    overflow-y: auto;
+}
